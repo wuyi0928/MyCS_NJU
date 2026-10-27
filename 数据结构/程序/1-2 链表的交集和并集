@@ -1,0 +1,136 @@
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct Node Node;
+struct Node
+{
+	int data;
+	Node* next;
+};
+Node* CreateA(int n);
+Node* CreateB(int m);
+Node* Intersect(Node* headA, Node* headB);
+Node* Union(Node* headA, Node* headB);
+int main()
+{
+	int n = 0, m = 0;
+	scanf_s("%d %d", &n, &m);
+	Node* headA = NULL;
+	Node* headB = NULL;
+	headA = CreateA(n);
+	headB = CreateB(m);
+	Intersect(headA, headB);
+	Union(headA, headB);
+	return 0;
+}
+Node* CreateA(int n)
+{
+	Node* headA = NULL;
+	Node* tailA = NULL;
+	Node* p;
+	for (int i = 0; i < n; i++)
+	{
+		Node* p = (Node*)malloc(sizeof(Node));
+		scanf_s("%d", &p->data);
+		p->next = NULL;
+		if (headA == NULL)
+			headA = p;
+		else
+			tailA->next = p;
+		tailA = p;
+	}
+	return headA;
+}
+Node* CreateB(int m)
+{
+	Node* headB = NULL;
+	Node* tailB = NULL;
+	Node* p;
+	for (int i = 0; i < m; i++)
+	{
+		Node* p = (Node*)malloc(sizeof(Node));
+		scanf_s("%d", &p->data);
+		p->next = NULL;
+		if (headB == NULL)
+			headB = p;
+		else
+			tailB->next = p;
+		tailB = p;
+	}
+	return headB;
+}
+Node* Intersect(Node* headA, Node* headB)
+{
+	Node* p = headA;
+	Node* q = headB;
+	int flag = 1;
+	while (p != NULL && q!= NULL)
+	{
+		if (p->data == q->data)
+		{
+			if (!flag) printf(" ");
+			printf("%d", p->data);
+			flag = 0;
+			p = p->next;
+			q = q->next;
+		}
+		else if (p->data < q->data)
+		{
+			p = p->next;
+		}
+		else if (p->data > q->data)
+		{
+			q = q->next;
+		}
+	}
+	if (flag) printf("EMPTY");
+	printf("\n");
+	return NULL;
+}
+Node* Union(Node* headA, Node* headB)
+{
+	Node* p = headA; 
+	Node* q = headB; 
+	int first = 1; 
+	while (p != NULL && q != NULL) 
+	{ 
+		if (p->data < q->data) 
+		{
+			if (!first) printf(" "); 
+			printf("%d", p->data); 
+			first = 0; 
+			p = p->next; 
+		} 
+		else if (p->data > q->data) 
+		{ 
+			if (!first) printf(" "); 
+			printf("%d", q->data); 
+			first = 0; 
+			q = q->next; 
+		} 
+		else 
+		{ 
+			if (!first) printf(" "); 
+			printf("%d", p->data); 
+			first = 0; 
+			p = p->next; 
+			q = q->next; 
+		} 
+	} 
+	while (p != NULL) 
+	{ 
+		if (!first) printf(" "); 
+		printf("%d", p->data); 
+		first = 0; 
+		p = p->next; 
+	} 
+	while (q != NULL) 
+	{ 
+		if (!first) printf(" "); 
+		printf("%d", q->data); 
+		first = 0; 
+		q = q->next; 
+	} 
+	if (first) printf("EMPTY"); 
+	printf("\n"); 
+	return NULL;
+}
