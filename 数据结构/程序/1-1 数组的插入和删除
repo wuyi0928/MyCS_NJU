@@ -1,0 +1,75 @@
+#include<stdio.h>
+int Insert(int a[],int x, int p,int m,int count);
+int Delete(int a[], int p, int m,int count);
+int main()
+{
+	int n = 0, k = 0;
+	int a[2000];
+	int count = 0;
+	scanf_s("%d %d", &n, &k);
+	int m = n;
+	for (int i = 0; i <= n - 1; i++)
+		scanf_s("%d", &a[i]);
+	for (int i = 1; i <= k; i++)
+	{
+		char c;
+		scanf_s(" %c", &c);
+		if (c == 'I')
+		{
+			int p,x;
+			scanf_s("%d %d", &p, &x);
+
+			count = Insert(a, x, p, m, count);
+			m++;
+
+			for (int i = 0; i < m; i++)
+			{
+				if (i > 0) printf(" ");
+				printf("%d", a[i]);
+			}
+			if (m == 0) printf("EMPTY");
+			printf("\n%d\n", count);
+		}
+		else if (c == 'D')
+		{
+			int p;
+			scanf_s("%d", &p);
+
+			count = Delete(a, p, m, count);
+			m--;
+
+			if (m == 0) printf("EMPTY"); 
+			else 
+			{ 
+				for (int i = 0; i < m; i++) 
+				{ 
+					if (i > 0) printf(" "); 
+					printf("%d", a[i]); 
+				} 
+			} 
+			printf("\n%d\n", count);
+		}
+	}
+	return 0;
+}
+int Insert(int a[],int x,int p,int m,int count)
+{
+	count = 0;
+	for (int i = m; i >= p; i--)
+	{
+		a[i] = a[i - 1];
+		count++;
+	}
+	a[p - 1] = x;
+	return count;
+}
+int Delete(int a[], int p, int m,int count)
+{
+	count = 0;
+	for (int i = p - 1; i <= m - 2; i++)
+	{
+		a[i] = a[i + 1];
+		count++;
+	}
+	return count;
+}
