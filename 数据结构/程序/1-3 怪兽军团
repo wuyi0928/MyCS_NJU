@@ -1,0 +1,288 @@
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct Node Node;
+struct Node
+{
+    int id;
+    Node* next;
+};
+int main()
+{
+    int n;
+    scanf_s("%d", &n);
+    long long initialA[2000];
+    long long initialB[2000];
+    long long hpA[2000];
+    long long hpB[2000];
+    int aliveA[2000] = { 0 };
+    int aliveB[2000] = { 0 }; 
+    int revivedA[2000] = { 0 };
+    int revivedB[2000] = { 0 };
+    int nextA[2000];
+    int nextB[2000];
+    for (int i = 0; i < n; i++)
+    {
+        scanf_s("%lld", &initialA[i]);
+        hpA[i] = initialA[i];
+        aliveA[i] = 1;
+        nextA[i] = i + 1;
+    }
+    for (int i = 0; i < n; i++)
+    {
+        scanf_s("%lld", &initialB[i]);
+        hpB[i] = initialB[i];
+        aliveB[i] = 1;
+        nextB[i] = i + 1;
+    }
+    nextA[n - 1] = -1;
+    nextB[n - 1] = -1;
+    int headA = 0;
+    int headB = 0;
+    int loseA = 0;
+    int loseB = 0;
+    int rounds = 0;
+    while (headA != -1 && headB != -1)
+    {
+        rounds++;
+
+        int dA = 0;
+        int dB = 0;
+        int p = headA;
+        int q = headB;
+        while (p != -1 && q != -1)
+        {
+            int next_p = nextA[p];
+            int next_q = nextB[q];
+
+            if (hpA[p] > hpB[q])
+            {
+                hpA[p] = hpA[p] - hpB[q];
+
+                aliveB[q] = 0;
+                dB++;
+            }
+            else if (hpA[p] < hpB[q])
+            {
+                hpB[q] = hpB[q] - hpA[p];
+
+                aliveA[p] = 0;
+                dA++;
+            }
+            else
+            {
+                aliveA[p] = 0;
+                aliveB[q] = 0;
+
+                dA++;
+                dB++;
+            }
+
+            p = next_p;
+            q = next_q;
+        }
+        headA = -1;
+        int tailA = -1;
+        for (int i = 0; i < n; i++)
+        {
+            if (aliveA[i])
+            {
+                if (headA == -1)
+                    headA = i;
+                else
+                    nextA[tailA] = i;
+
+                tailA = i;
+            }
+        }
+
+        if (tailA != -1)
+            nextA[tailA] = -1;
+
+        headB = -1;
+        int tailB = -1;
+
+        for (int i = 0; i < n; i++)
+        {
+            if (aliveB[i])
+            {
+                if (headB == -1)
+                    headB = i;
+                else
+                    nextB[tailB] = i;
+
+                tailB = i;
+            }
+        }
+
+        if (tailB != -1)
+            nextB[tailB] = -1;
+        if (dA > dB)
+        {
+            loseA++;
+            loseB = 0;
+        }
+        else if (dA < dB)
+        {
+            loseB++;
+            loseA = 0;
+        }
+        else
+        {
+            loseA = 0;
+            loseB = 0;
+        }
+        if (loseA == 3)
+        {
+            int choose = -1;
+
+            for (int i = 0; i < n; i++)
+            {
+                if (!aliveA[i] && !revivedA[i])
+                {
+                    if (choose == -1 ||
+                        initialA[i] > initialA[choose] ||
+                        (initialA[i] == initialA[choose] && i < choose))
+                    {
+                        choose = i;
+                    }
+                }
+            }
+
+            if (choose != -1)
+            {
+                aliveA[choose] = 1;
+                revivedA[choose] = 1;
+                hpA[choose] = initialA[choose];
+               if (headA == -1)
+                {
+                    headA = choose;
+                    nextA[choose] = -1;
+                }
+                else if (choose < headA)
+                {
+                    nextA[choose] = headA;
+                    headA = choose;
+                }
+                else
+                {
+                    int cur = headA;
+
+                    while (nextA[cur] != -1 &&
+                        nextA[cur] < choose)
+                    {
+                        cur = nextA[cur];
+                    }
+
+                    nextA[choose] = nextA[cur];
+                    nextA[cur] = choose;
+                }
+            }
+            loseA = 0;
+        }
+        if (loseB == 3)
+        {
+            int choose = -1;
+
+            for (int i = 0; i < n; i++)
+            {
+                if (!aliveB[i] && !revivedB[i])
+                {
+                    if (choose == -1 ||
+                        initialB[i] > initialB[choose] ||
+                        (initialB[i] == initialB[choose] && i < choose))
+                    {
+                        choose = i;
+                    }
+                }
+            }
+
+            if (choose != -1)
+            {
+                aliveB[choose] = 1;
+                revivedB[choose] = 1;
+                hpB[choose] = initialB[choose];
+                if (headB == -1)
+                {
+                    headB = choose;
+                    nextB[choose] = -1;
+                }
+                else if (choose < headB)
+                {
+                    nextB[choose] = headB;
+                    headB = choose;
+                }
+                else
+                {
+                    int cur = headB;
+
+                    while (nextB[cur] != -1 &&
+                        nextB[cur] < choose)
+                    {
+                        cur = nextB[cur];
+                    }
+
+                    nextB[choose] = nextB[cur];
+                    nextB[cur] = choose;
+                }
+            }
+
+            loseB = 0;
+        }
+        if (headA == -1 || headB == -1)
+            break;
+    }
+    if (headA != -1 && headB == -1)
+        printf("A\n");
+    else if (headA == -1 && headB != -1)
+        printf("B\n");
+    else
+        printf("DRAW\n");
+
+    printf("%d\n", rounds);
+    if (headA == -1)
+    {
+        printf("EMPTY\n");
+    }
+    else
+    {
+        int p = headA;
+        int first = 1;
+
+        while (p != -1)
+        {
+            if (!first)
+                printf(" ");
+
+            printf("%lld", hpA[p]);
+
+            first = 0;
+            p = nextA[p];
+        }
+
+        printf("\n");
+    }
+    if (headB == -1)
+    {
+        printf("EMPTY\n");
+    }
+    else
+    {
+        int p = headB;
+        int first = 1;
+
+        while (p != -1)
+        {
+            if (!first)
+                printf(" ");
+
+            printf("%lld", hpB[p]);
+
+            first = 0;
+            p = nextB[p];
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
