@@ -1,0 +1,152 @@
+[
+  {
+    "source_name": "01_账本概览_管理员 1.png",
+    "repository_name": "01_账本概览_管理员.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "fa83a795131ca92206fdca4ae84b46adee20d8e0d2e6b26153bda7c7b911ecc3",
+    "previous_sha256": "9f9e0cdf860bb9c7e9e675567aa538dcbea7b20726851c96bf0d56a085f2251b"
+  },
+  {
+    "source_name": "02_收支查询_普通成员 1.png",
+    "repository_name": "02_收支查询_普通成员.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "9736315ca30581094ee781be54182017b1948732f024e906da40a32da9e4553f",
+    "previous_sha256": "dda876ab2149ee077ebcef26b39d355832a54982f19622cc5e3992beb02e36c9"
+  },
+  {
+    "source_name": "03_新增收支_普通成员 1.png",
+    "repository_name": "03_新增收支_普通成员.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "edf9375e06994b58a87e08d797f633f0b5294bd3353f0961457fbd6fdfdadc5c",
+    "previous_sha256": "e7da23f156b0e6ade28f543cfdc8ae373a0eb7c21f4517ddbad4bebbe4ef8730"
+  },
+  {
+    "source_name": "04_审核中心_管理员 1.png",
+    "repository_name": "04_审核中心_管理员.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "ac238bc9b9ac902c0de294221ca67c5a06176dec2859ff3b138c9681af2260a3",
+    "previous_sha256": "6e54f0fbd1bba97418dd9877c628618fef878756f715dcd15c3517b850710daf"
+  },
+  {
+    "source_name": "05_已审记录与关联更正 1.png",
+    "repository_name": "05_已审记录与关联更正.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "07b408ae3ffdddf02f4c836b4412b517d29419fd8fddac28521b379dd31d2ea2",
+    "previous_sha256": "34c36001b5c93ecdb1f7ed70f0e5811a1b315be271de0de09db488549a171f65"
+  },
+  {
+    "source_name": "06_统计分析_管理员 1.png",
+    "repository_name": "06_统计分析_管理员.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "d2a58884e98d880f8fe7cf72d1f17634d5358e7abfee86225c9bcfb0acc33832",
+    "previous_sha256": "b11e7e997a672d3057fff33241a8213d8da6f854fea23744e0a6a386a4e3f79b"
+  },
+  {
+    "source_name": "07_预算管理_管理员 1.png",
+    "repository_name": "07_预算管理_管理员.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "80645d332c0a4ef349b337fa110f1f7e476dccc8f8bf0caa9f2ab7f33b196b16",
+    "previous_sha256": "a559b5376422a3c88679613ea5a81b17e1501f915d7460ece6271675bd239403"
+  },
+  {
+    "source_name": "08_月度结算_管理员 1.png",
+    "repository_name": "08_月度结算_管理员.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "990be4239132b77ba02f4b3d4712e48281299b7448d6a6a889edca33252efb70",
+    "previous_sha256": "46a0b4f969511439eab1a74d5f133b59239082e4e389b7af7d0f707c7074724a"
+  },
+  {
+    "source_name": "09_结算快照与作废入口 1.png",
+    "repository_name": "09_结算快照与作废入口.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "f5a6a1baa95e24efc6b66d2687b7c8a54ff9b3d6e575f449a0aed66f11632cbd",
+    "previous_sha256": "37a0169a3f19b4c4b1bbc8b63d28fee5b5fc169d243e56934f73dbf84ccdbedb"
+  },
+  {
+    "source_name": "10_成员权限与邀请 1.png",
+    "repository_name": "10_成员权限与邀请.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "66c0d70d0c16a5f8cee7f77410b76dea1e4e832afde27db920dc0b18f53703d7",
+    "previous_sha256": "e69aa7119e185feb0e34e3294becd20816b2ce431d9964d6177f27e36c9a2184"
+  },
+  {
+    "source_name": "11_操作日志_管理员 1.png",
+    "repository_name": "11_操作日志_管理员.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "80a8a4f21f250fbf1f95fb74c8eeb3b816424e49b08310c736125c6615a5554c",
+    "previous_sha256": "0e8653b8ea4cece1c14dd3e8e59fd1b66dade28d7a569aaa022ff462ace2e677"
+  },
+  {
+    "source_name": "12_只读成员视图 1.png",
+    "repository_name": "12_只读成员视图.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "1ee21719b6c6286fbd55fce8ffeee70d8692517b06ab5011d2df3dbdb8417efc",
+    "previous_sha256": "4e55b690f6515e34a2c8486d71adf3be114fbdbe5590d123e631dc1a8fa1b928"
+  },
+  {
+    "source_name": "13_账本选择创建与加入 1.png",
+    "repository_name": "13_账本选择创建与加入.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "b4971c20ef2247ce3df1e6356df5dbea57a0a777de5ac514c16edb74b9733352",
+    "previous_sha256": "83011cf27f3bdef7055db78a54a32b3cc90b806b3095ed4b7d81ba20d9a878e7"
+  },
+  {
+    "source_name": "14_关键操作确认组件 1.png",
+    "repository_name": "14_关键操作确认组件.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "386dd93340c83eb16522e304763b5bba87a2f2e3a466998228cf9396dcf812e8",
+    "previous_sha256": "679891708170c1209d13019e2b596223e001352217d65ec38ab77fe942dec1e4"
+  },
+  {
+    "source_name": "15_异常与空状态 1.png",
+    "repository_name": "15_异常与空状态.png",
+    "size": [
+      1440,
+      1000
+    ],
+    "sha256": "3e858722d87cf8c3c8b80e6cc77828c631fb81a400fb8905f2d2dd0b879e348c",
+    "previous_sha256": "6ff461484609fee1f7be4bd666543749e22f47656c3e590e574fb9a644a8c060"
+  }
+]
