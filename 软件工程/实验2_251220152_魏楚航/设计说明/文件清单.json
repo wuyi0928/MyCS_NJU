@@ -1,292 +1,270 @@
 [
   {
     "path": "UML总览.png",
-    "bytes": 748616,
-    "sha256": "230735872f3d32b522fe6e7a5fbedf15114e8b88d1de88bd743bd92ed7bf9985"
+    "sha256": "1c37c86dc443ba6d9ce8b213bddaf9b2a1ae14e732aa2afceab02fa38e7e6b42"
   },
   {
     "path": "打开查看.html",
-    "bytes": 6207,
-    "sha256": "7b4592f37fb4416d5f0fbc71353d7561e1b19f62443a150c1c11af3ea60b229e"
+    "sha256": "968a7e409b8a61c505f0cc5c8f830c303f0bad4972697e5cec09d20318179371"
   },
   {
     "path": "界面总览.png",
-    "bytes": 418846,
-    "sha256": "0dc6a713cc1ba80dc6b695c038e96607c8dea784a07f3c78669afb7a074ecf25"
+    "sha256": "deb4b32fb20b0a4dd448a8c0497208b35887fe8f52a24723f64e5a37ff4971c8"
   },
   {
     "path": "UI界面\\01_账本概览_管理员.png",
-    "bytes": 116814,
-    "sha256": "0fa25c7504c5d72f1b9d36378d44bc3b34e4464590a03a868e16c91ee01fb2c3"
+    "sha256": "9f9e0cdf860bb9c7e9e675567aa538dcbea7b20726851c96bf0d56a085f2251b"
   },
   {
     "path": "UI界面\\01_账本概览_管理员.svg",
-    "bytes": 10597,
-    "sha256": "4c5fa1e0a1717dd8c9c0d5c884501265398961b4f7feca587a2bbf46e56bf86d"
+    "sha256": "c4df8c76f01b744306669dd544ce91189e7434a287ab0288485840fd3fe0e2f4"
   },
   {
     "path": "UI界面\\02_收支查询_普通成员.png",
-    "bytes": 106233,
-    "sha256": "c6aa9b0d51acc699668612c62fc759b5ae539dc75781f24ad6b4ad87d49b43ab"
+    "sha256": "dda876ab2149ee077ebcef26b39d355832a54982f19622cc5e3992beb02e36c9"
   },
   {
     "path": "UI界面\\02_收支查询_普通成员.svg",
-    "bytes": 11173,
-    "sha256": "216946a4831548f356dc0dd629670dc9f3795d7181210e088f2c72cca4db8a6a"
+    "sha256": "b598a30ac916daaba2c39031386e94d529a291759777d51ebbb141f2280dd432"
   },
   {
     "path": "UI界面\\03_新增收支_普通成员.png",
-    "bytes": 98830,
-    "sha256": "df79e754d8cd9e55b72a66fb4044aaa4cc63acd87de7998dcb715108cfac0e2f"
+    "sha256": "e7da23f156b0e6ade28f543cfdc8ae373a0eb7c21f4517ddbad4bebbe4ef8730"
   },
   {
     "path": "UI界面\\03_新增收支_普通成员.svg",
-    "bytes": 7506,
-    "sha256": "703845de1617709cbc99be651c1a2d95e4bbee92fc355f7df4a68c82cb1651f1"
+    "sha256": "f1b3be3f573c53cb8756162722471c2fe30deb342196d361c85c7716dbd95421"
   },
   {
     "path": "UI界面\\04_审核中心_管理员.png",
-    "bytes": 98050,
-    "sha256": "74e2f856227d236d1625aeb97f2be31b71dd87113db969725ba70aec00b4079b"
+    "sha256": "6e54f0fbd1bba97418dd9877c628618fef878756f715dcd15c3517b850710daf"
   },
   {
     "path": "UI界面\\04_审核中心_管理员.svg",
-    "bytes": 7365,
-    "sha256": "e2b36b6b720b98eb6607efa970f738bdabc89b964956e95f4e7bcb661424d07b"
+    "sha256": "f3530aaaeb1415c4856e7c09c0315697cf0f718b9f21bd7c73dbacfe71f8b7ee"
   },
   {
     "path": "UI界面\\05_已审记录与关联更正.png",
-    "bytes": 118865,
-    "sha256": "f9163e84f3a49d7e291cdaf33b9f785a7c55d0551343786e519ef91a64b69e1c"
+    "sha256": "34c36001b5c93ecdb1f7ed70f0e5811a1b315be271de0de09db488549a171f65"
   },
   {
     "path": "UI界面\\05_已审记录与关联更正.svg",
-    "bytes": 7710,
-    "sha256": "b6986e609d39afb0f6b35ed1f6949317917cd80aebf3e648156eec1e55a4ce1c"
+    "sha256": "dd5286025a8269ceb79a235359df21b6fbc28a600d716acb41437efa6625ff8c"
   },
   {
     "path": "UI界面\\06_统计分析_管理员.png",
-    "bytes": 95241,
-    "sha256": "b90a7e730b829c91ca43406e39b80542628e26492d2b874d510817e0a8c63e7a"
+    "sha256": "b11e7e997a672d3057fff33241a8213d8da6f854fea23744e0a6a386a4e3f79b"
   },
   {
     "path": "UI界面\\06_统计分析_管理员.svg",
-    "bytes": 8544,
-    "sha256": "381d129ceab76b10e2d7fcd1f6c90db334fc82520bca24498455f2e4aecd5cbe"
+    "sha256": "8133c2e721c77962428830e8e26b58c45be42d2ac977c052c5cde66d5fb02ece"
   },
   {
     "path": "UI界面\\07_预算管理_管理员.png",
-    "bytes": 100950,
-    "sha256": "4bfca98482b7f7014d32466eb51d26bc62470779adbf5cc075837eb42dc2d16f"
+    "sha256": "a559b5376422a3c88679613ea5a81b17e1501f915d7460ece6271675bd239403"
   },
   {
     "path": "UI界面\\07_预算管理_管理员.svg",
-    "bytes": 8539,
-    "sha256": "08ffd4959660abb8fab1e6f95a7ec3fb9a7a4f60d8542e581ffbd0a159d0b31c"
+    "sha256": "4d91f48446fbae8285d4233040cbe7fa6371c61b4deae8a02af31c11ac52d9ad"
   },
   {
     "path": "UI界面\\08_月度结算_管理员.png",
-    "bytes": 99746,
-    "sha256": "f7d403d63a8f05eea5a2250a2810a1d833f87fbfc39e212e99f6a484be2d0b73"
+    "sha256": "46a0b4f969511439eab1a74d5f133b59239082e4e389b7af7d0f707c7074724a"
   },
   {
     "path": "UI界面\\08_月度结算_管理员.svg",
-    "bytes": 7747,
-    "sha256": "1fe076af19122d1e004044b40c67b6ecac9a39f223e8301bff176c78c28f4fa8"
+    "sha256": "ed4058ef603253d4165cb2491bba1daaa0a4d001c2c22ba71aef69a8d3c97cec"
   },
   {
     "path": "UI界面\\09_结算快照与作废入口.png",
-    "bytes": 100969,
-    "sha256": "ba0b3facaaab0c2b06b170b2a43568515750eb33c2c6cd693ae24bb59e895270"
+    "sha256": "37a0169a3f19b4c4b1bbc8b63d28fee5b5fc169d243e56934f73dbf84ccdbedb"
   },
   {
     "path": "UI界面\\09_结算快照与作废入口.svg",
-    "bytes": 9019,
-    "sha256": "3fce573e2c43fa3c663534ca74d640af0d2be5d92161937b964f910d31a622ea"
+    "sha256": "8da494d0784b9e2d7194d2ff0a1d0103a492b92ee34982800d7da2988a9d5cd8"
   },
   {
     "path": "UI界面\\10_成员权限与邀请.png",
-    "bytes": 118319,
-    "sha256": "b85813473613d69d8997c7105d79940a3f461bc3f4bf5c5d773744004457eafd"
+    "sha256": "e69aa7119e185feb0e34e3294becd20816b2ce431d9964d6177f27e36c9a2184"
   },
   {
     "path": "UI界面\\10_成员权限与邀请.svg",
-    "bytes": 8403,
-    "sha256": "de0f945770888d2efe7489a666f3d7b3905384fa154854a0d8f2ef762a65c7e1"
+    "sha256": "657c1f5acbfa5077404644280af48646a3770a8c718b3ccb327948810b87c881"
   },
   {
     "path": "UI界面\\11_操作日志_管理员.png",
-    "bytes": 99736,
-    "sha256": "59d66fa4113703eddea866a99953bcf7de8c2e3d32ee2c86ae5412dfb8c4e9b4"
+    "sha256": "0e8653b8ea4cece1c14dd3e8e59fd1b66dade28d7a569aaa022ff462ace2e677"
   },
   {
     "path": "UI界面\\11_操作日志_管理员.svg",
-    "bytes": 9613,
-    "sha256": "217c3df4c885c1d0d35e565f17e902439fd882d3870b71d3cb9c8539866c304e"
+    "sha256": "025a2be3e418d4e0e7f63bc7afbcae2a2b6687aea78324ab4bc6e6dc8a68f362"
   },
   {
     "path": "UI界面\\12_只读成员视图.png",
-    "bytes": 90619,
-    "sha256": "3754a80c89bf10609954c9b724d06a39346498dc1621864a5127094345902580"
+    "sha256": "4e55b690f6515e34a2c8486d71adf3be114fbdbe5590d123e631dc1a8fa1b928"
   },
   {
     "path": "UI界面\\12_只读成员视图.svg",
-    "bytes": 7830,
-    "sha256": "91ea22313ed13a00d71b7f2ce348a0badc5ce745c242a570077c20a7e87e31a5"
+    "sha256": "78aa3b3a2097bade331bb99ad2b67f1b6d46988595a7ec39612afaae8ef8591a"
   },
   {
     "path": "UI界面\\13_账本选择创建与加入.png",
-    "bytes": 87971,
-    "sha256": "71a2a06b306dc95be00e906062e000feda6159bd744abaac629423838729f2ba"
+    "sha256": "83011cf27f3bdef7055db78a54a32b3cc90b806b3095ed4b7d81ba20d9a878e7"
   },
   {
     "path": "UI界面\\13_账本选择创建与加入.svg",
-    "bytes": 4083,
-    "sha256": "b095d248bd77d500311dfc723770753f4cc3f2f010078049848bb098863925d0"
+    "sha256": "f140b016b5475804f6c53ae1917fad8f9ae5dafd183d54e4efcfe82601307dcb"
   },
   {
     "path": "UI界面\\14_关键操作确认组件.png",
-    "bytes": 98768,
-    "sha256": "fb5ef9c1323b4bea4a3dbe4beb3cd4a64b70c6e85b637658df1409c0159d50e8"
+    "sha256": "679891708170c1209d13019e2b596223e001352217d65ec38ab77fe942dec1e4"
   },
   {
     "path": "UI界面\\14_关键操作确认组件.svg",
-    "bytes": 5884,
-    "sha256": "f32c63ca8b6a425304f2c5a7b57d2155070ab89669090de5a72c695d25ae8a0d"
+    "sha256": "a8a0dc0fa1767ffcba5879d0e6a54c143c5463166b6d4721792d09072d87a451"
   },
   {
     "path": "UI界面\\15_异常与空状态.png",
-    "bytes": 72456,
-    "sha256": "16773aee4b769e4b40d3f46cee86e1a46cd941e9e987cd1030c16e279282dcb4"
+    "sha256": "6ff461484609fee1f7be4bd666543749e22f47656c3e590e574fb9a644a8c060"
   },
   {
     "path": "UI界面\\15_异常与空状态.svg",
-    "bytes": 3597,
-    "sha256": "fca89e2833209200f16a4a7088d3de4ed1723d8c8c4e7050ff5dd275da608f7e"
+    "sha256": "75afc87b51d38523cecd73db33750271115055e7e634029f7b6ef48ff6dac2bc"
   },
   {
     "path": "UML\\01_类图.png",
-    "bytes": 336036,
-    "sha256": "251f309e25c570288d01b6a4fa6cc6499ca478a4fccbedeb0199b82f803cf471"
+    "sha256": "13b70264c07ed4b7674c17d94b61dd5298510da02b114ea7d40fa00cf7c1f769"
   },
   {
     "path": "UML\\01_类图.puml",
-    "bytes": 4191,
-    "sha256": "9a284d5ff053ad9701358e4d46a72d7b5263528109031f1f36971d2d51f9f611"
+    "sha256": "49f63c60f8ea61d77d218c4fa5b1ccb3b2e0e09112e3adf4ba22fc2f14938f12"
   },
   {
     "path": "UML\\01_类图.svg",
-    "bytes": 71458,
-    "sha256": "9d21b45ea3e494cf4535f6e121c97d2ba0cfe7d7dcc44c24423d52d6e4949fcb"
+    "sha256": "7de1990cb097841c0bcb2bf690205a1cc49d4eb20208e1fd8f94a53b1d62cc12"
   },
   {
     "path": "UML\\02_组件图.png",
-    "bytes": 148910,
-    "sha256": "584ff7f2ae657c13ffcf7b4af4560dc7c5fa985b4c9f3a4fa68bdb778d3a2cb4"
+    "sha256": "859add573cef8293e656f421b2033ac7de912ce14e02ef36bc7adb5337fddf27"
   },
   {
     "path": "UML\\02_组件图.puml",
-    "bytes": 2138,
-    "sha256": "9f98ff73ddc720331b14fdb377fd05bdd9c3b84ce43559f3f7fb65713af01aec"
+    "sha256": "0fc51484aaf2e9f51a365a6aa80ffe45d1dd6003e2fdfbe21be9c769165c480c"
   },
   {
     "path": "UML\\02_组件图.svg",
-    "bytes": 25796,
-    "sha256": "90a3f3fe23c2e71e381a5c8c017247d2e1f7fbf0d4a36a88b51d23c016cb12f0"
+    "sha256": "dc0dc9350a95c584c7e8c00154727b825f4191a03fe40a5b804effb10e7af655"
   },
   {
     "path": "UML\\03_收支状态图.png",
-    "bytes": 86293,
-    "sha256": "6e140fa4fbaeea0c5567baf31fc99600775b6e8093f51d325580fdc2333c6b87"
+    "sha256": "1b4b0b69db60214957bc535578dd7a9b0bf8c16debbedf58e06ae554da375bee"
   },
   {
     "path": "UML\\03_收支状态图.puml",
-    "bytes": 1748,
-    "sha256": "822a39bc5811ce8387962e11252f34289a54b7077dae18879281755badfbbbfc"
+    "sha256": "bd216cf6673df3fb2436f9cd81fc5109189113727e8d1d88f1c4a028f286810c"
   },
   {
     "path": "UML\\03_收支状态图.svg",
-    "bytes": 13870,
-    "sha256": "fd21201abdd58fab983b530326eae03a7b8dd0f14c9c190328c610a177658b81"
+    "sha256": "f3fc445c686a88c47ee9d9fa608cb074c054162b7d5235cde9d28965d3c2a57b"
   },
   {
     "path": "UML\\04_审核时序图.png",
-    "bytes": 104291,
-    "sha256": "fc1785b513c28eedf13d48aa01b9056deded8e48078ad08be74d19c75795022d"
+    "sha256": "9ff4dbdd42ab8f2b47a50a8c60d0ffcf97d5c8e41a2a4f8abea65e8cf2eb7ebd"
   },
   {
     "path": "UML\\04_审核时序图.puml",
-    "bytes": 1823,
-    "sha256": "bb6e5a5a00c61a963ceb2de051ffbbc24e5a6322e14afedcb0957da6840fc8f4"
+    "sha256": "e881d4eb7369acc1074b6a47b23e0d27148d41a45dc12e8b6b22ec6de192133e"
   },
   {
     "path": "UML\\04_审核时序图.svg",
-    "bytes": 21950,
-    "sha256": "2fd756a2a7d364ab031666e3c49f1114d17104d29f7936335e2eb3998c283657"
+    "sha256": "6c3c56455f5fa765d4738ecd82903f4ea140aa9be6e1f9cf59e7487113d83532"
   },
   {
     "path": "UML\\05_月结时序图.png",
-    "bytes": 139959,
-    "sha256": "283e68478150dc0ecb4335949a11b3e889bd4c8386330eef9c372b603646e299"
+    "sha256": "f1e2c50a24fb2e617cc01d7c2a487930630284ff6830b88758db0726bd811098"
   },
   {
     "path": "UML\\05_月结时序图.puml",
-    "bytes": 2370,
-    "sha256": "b27a7b4411231d6969f03b6085cda2e62279e5e1a67010f1bbddb7eb5eb741fb"
+    "sha256": "ef2ca9009ab8b1ff437cfce6f7dbd53e09d50e34a6c47ef79a050b3c5e6431cd"
   },
   {
     "path": "UML\\05_月结时序图.svg",
-    "bytes": 28723,
-    "sha256": "fe990a05d60615d12430be4dc193acf44f44544320f7b85ea20ca4ce93d06f76"
+    "sha256": "3f1d6096e048dcf8ca2d9ac7313da2b5bda9e6b8089ec9d74c02a0b457f8b9bb"
   },
   {
     "path": "UML\\06_用例图.png",
-    "bytes": 97617,
-    "sha256": "f76b8d9d69b095e2475d8fe7f9c0aa04100bdf5b80a120e3475e7bd507e1a651"
+    "sha256": "d99a540a29a5d338bc12c1f4a054fbd260d9ce85c7a17895b6eb40449c2623d8"
   },
   {
     "path": "UML\\06_用例图.puml",
-    "bytes": 1714,
-    "sha256": "cddacd34206e4b6a07cd3faaaca33557906f125f20f9db65826b8d179100ac85"
+    "sha256": "79a55edf8a4c8fa4e792ac92e4e2f43a512b22d5daddea54957c489066990714"
   },
   {
     "path": "UML\\06_用例图.svg",
-    "bytes": 13897,
-    "sha256": "3702d74c8ab9f3bea41f9f4be2a2d2b12b88f756f18c196bd85875e75d293c5d"
+    "sha256": "4445def9aec9ab4004140b38fe10f8c87bbab2dda0fa4cf06c282f2d08e14a0d"
   },
   {
     "path": "UML\\07_结算单状态图.png",
-    "bytes": 36959,
-    "sha256": "bcb7495aa343c2451a9ebc8e47809e3185a5eba49295cba0c0dfbfa8747bef75"
+    "sha256": "0e16d858b16049aab3a38649db7bdef48454050a9676e6000b90e0c43d088cae"
   },
   {
     "path": "UML\\07_结算单状态图.puml",
-    "bytes": 1071,
-    "sha256": "382c23e4244a9eb6754e16e695072892288201c93b1761290bb23b39325f3f18"
+    "sha256": "1c4dd5c75e94b60abd36ab9648cba5081e24759d531dd4c5b206958127b13748"
   },
   {
     "path": "UML\\07_结算单状态图.svg",
-    "bytes": 6574,
-    "sha256": "81fc03e95af61c4b2fde1a1c80f52c7947e3a9b602b4e9a8234453f0988442c7"
+    "sha256": "ebdd218ea556f8b3ac947404994ac697d3dc23d002473039d4bc8202353bd5a4"
   },
   {
-    "path": "设计说明\\文件清单.json",
-    "bytes": 9345,
-    "sha256": "316df3291c963d617eb2746a1d5038d9dfa270ec728c0e4e60c72b5ed3efdb40"
+    "path": "设计说明\\人工审查记录_01_视觉风格.md",
+    "sha256": "a660bceca5b99870f769a66c18f12a76fa376d57d0a689caccedc98687adda3f"
+  },
+  {
+    "path": "设计说明\\人工审查记录_02_轮胎尺寸.md",
+    "sha256": "122580a0dd7e57dd1eea6b9be316e401efe1c6f280cbbe5839c457f6c1a78ae6"
+  },
+  {
+    "path": "设计说明\\人工审查记录_03_分摊规则.md",
+    "sha256": "0d1384c59ede7f0e66c2401ed88703e9f6e03cc0651236c304f9c6c96dd3c011"
+  },
+  {
+    "path": "设计说明\\人工审查记录_04_管理员职责与自审.md",
+    "sha256": "449115764c57de269588fee2d29fdb7380468b25b015f2cb0fd804082bcb6960"
+  },
+  {
+    "path": "设计说明\\人工审查记录_05_预算与待审上限.md",
+    "sha256": "6b114f442f8c6c08cb6521dd7fc7cc0a8ae9a3c348f7962260ee1a51ec7b5b9f"
+  },
+  {
+    "path": "设计说明\\人工审查记录_06_多次更正与跨月归属.md",
+    "sha256": "2a365c2238b262c30e620bf30aa90e4ffe0437be2ee6684095764d235aec2095"
+  },
+  {
+    "path": "设计说明\\人工审查记录_07_月结待审检查.md",
+    "sha256": "82fe5ab799f384231046199000f939935246e77ca4bfd59310345b24a54264ac"
+  },
+  {
+    "path": "设计说明\\人工审查记录_08_作废结算单后原账保护.md",
+    "sha256": "463685eade13300b71bea6870fca220141eb8a30db57f8c7288b1b88015a4ff1"
+  },
+  {
+    "path": "设计说明\\人工审查记录_09_居中与首页文案.md",
+    "sha256": "16dd7dad90671a648184a1cb3c04723e35dc979fc0f31f2e5148f9778cd91a93"
+  },
+  {
+    "path": "设计说明\\最终设计统一核对记录.md",
+    "sha256": "d659076dc24e03fdf9885cd6a6fdbdef56df8b059873303712a197a198d009e7"
   },
   {
     "path": "设计说明\\补充交互与异常状态.md",
-    "bytes": 2762,
-    "sha256": "60307ead7bea2ead1c43cffc569f543e139825193a74ee25ddc2d791bd90f082"
+    "sha256": "f21f9fa85ddfb382e73668ce1b6c44d9b1c836807b18c5ff96e710b46a5edbb3"
   },
   {
     "path": "设计说明\\设计说明与人工核对清单.md",
-    "bytes": 13873,
-    "sha256": "23b0b354153f10dd0791db495da6b18fc13489697ae8e14342cc9b1265edd530"
+    "sha256": "e1a6b9587ce963f208fb31e72e9dc2f030f474d2e2b648c80cba3ccd2874a300"
   },
   {
     "path": "设计说明\\验证记录.txt",
-    "bytes": 741,
-    "sha256": "6b47a92108a6f26c1be3f7d95385814d058fb75b4165afeac788c7a8d88eeaa0"
+    "sha256": "69753d6c5327c4e1d547e3a61b8fe18adc685a21f89f848637901963f4a69cbb"
   }
 ]
