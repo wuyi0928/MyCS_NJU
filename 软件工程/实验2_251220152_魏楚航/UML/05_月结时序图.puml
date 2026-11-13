@@ -28,6 +28,7 @@ alt 无权限
 else 已授权
   Gate -> Service : 发起结算
   Service -> DB : 开始事务；幂等校验；锁定账本月份
+  Service -> DB : 检查所选月份全部待审收支及调整
   alt 同请求成功结果已存在
     DB --> Service : 首次结算单
     Service -> DB : 结束事务
@@ -35,9 +36,12 @@ else 已授权
   else 本月已有有效单
     Service -> DB : 回滚
     Service --> UI : 已存在有效结算单
+  else 本月仍有待审核收支或调整
+    Service -> DB : 回滚，不生成单据或锁定
+    Service --> UI : 返回待审笔数及审核入口
   else 可生成
     Service -> DB : 读取一致版本的有效明细及调整
-    Service -> Policy : 校验已确认规则并计算承担与差额
+    Service -> Policy : 读取已保存的分摊明细，计算成员差额
     alt 规则未确认 / 输入不全 / 差额不守恒
       Service -> DB : 回滚
       Service --> UI : 无法生成，列出需处理问题
@@ -57,6 +61,7 @@ end
 note over Service, DB
 所有影响该月结算集合的写入遵守相同的月份锁协议。
 数据库保证同账本同月最多一个有效单，失败不遗留部分数据。
-旧单作废保留快照；跨期依赖与作废后解锁规则待确认。
+跨月调整只进入当前归属月的结算，不改旧快照。
+旧单作废不解锁原账；跨期调整重结依赖仍待确认。
 end note
 @enduml

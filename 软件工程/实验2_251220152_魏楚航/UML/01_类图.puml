@@ -23,7 +23,7 @@ class "用户" as User {
 class "账本" as Ledger {
   +id: UUID
   +名称: String
-  +超预算阻止提交: Boolean
+  {static} +每成员待审上限: Integer = 5
 }
 class "成员关系" as Member {
   +id: UUID
@@ -57,6 +57,7 @@ class "收支记录" as Entry {
   +版本: Integer
   +已更正: Boolean
   +创建请求号: UUID
+  +分摊方式: 均摊或手动指定
 }
 enum EntryState {
   待审核
@@ -68,11 +69,12 @@ enum EntryState {
 class "分摊明细" as Share {
   +id: UUID
   +承担金额分: Long
+  +获得余分: Boolean
 }
 class "调整信息" as Adjustment {
   +方向: 补记或冲减
   +原因: String
-  +归属月份: YearMonth
+  +归属月份: YearMonth（提交时当前月）
 }
 class "月预算" as Budget {
   +id: UUID
@@ -136,20 +138,28 @@ Audit "0..*" --> "1" User : 操作人
 Ledger "1" -- "0..*" Request
 note bottom of Member
 同用户同账本仅一条有效成员关系；退出不删历史。
-至少保留一名管理员；多管理员策略待确认。
+允许多管理员，新成员默认管理员；至少保留一名管理员。
 end note
 note bottom of Entry
 五个主状态；已更正、结算锁定均非主状态。
 常规金额 1..100000000 分；不使用浮点金额。
 调整沿用收支记录，独立审核，原金额不覆盖。
 end note
+note bottom of Share
+收入与支出均支持均摊和手动指定金额。
+均摊先按整数分向下取整，余下每分随机分给不同成员。
+具体明细随记录版本保存，重试和结算不重新抽签。
+手动金额非负且合计等于总额；允许部分成员为0分。
+end note
 note bottom of Adjustment
 AI设计假设：方向与正金额分开保存。
-跨月、多次更正及分摊算法仍待确认。
+允许同一原账多次调整，均关联原记录。
+跨月调整计入提交时当前月，不回写原月。
+每笔由其他管理员审核；有效金额=原额+有效调整之和。
 end note
 note bottom of Settlement
 同账本同月至多一张有效单；旧快照不覆盖。
-快照关联推导锁定；作废后的锁定策略待确认。
+曾被成功结算的记录持续锁定，结算单作废不解锁。
 end note
 note bottom of Request
 同账本同请求号唯一；授权后才可返回原结果。

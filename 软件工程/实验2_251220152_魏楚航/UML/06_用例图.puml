@@ -26,7 +26,7 @@ rectangle "多人共享记账系统" {
   usecase "新增本人收支\n修改、撤回及重提本人未审记录" as Write
   usecase "邀请 / 权限设置\n管理员转让" as Members
   usecase "审核 / 驳回\n整笔作废 / 关联调整" as Review
-  usecase "月总及分类预算\n超预算阻止开关" as Budget
+  usecase "月总及分类预算\n超预算提示" as Budget
   usecase "月结 / 查看快照\n作废结算单后重结" as Settle
   usecase "查询操作日志\n导出统计与日志" as Logs
   usecase "退出账本\n保留历史" as Exit
@@ -34,13 +34,16 @@ rectangle "多人共享记账系统" {
 All --> Read
 All --> Exit
 Writer --> Write
+Admin --> Write
 Admin --> Members
 Admin --> Review
 Admin --> Budget
 Admin --> Settle
 Admin --> Logs
 note bottom of Write
-管理员是否兼具记账权限待确认。
+管理员与普通记账成员均可维护本人未审记录。
+新成员默认管理员，三类角色继续保留。
+管理员不可审核本人创建的收支或调整。
 只读角色无记账、审核、设置与导出入口。
 end note
 note bottom of Exit
