@@ -1,0 +1,50 @@
+@startuml
+!pragma layout smetana
+skinparam defaultFontName Microsoft YaHei
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam ArrowColor #52667B
+skinparam classBackgroundColor #F0F7F6
+skinparam classBorderColor #267568
+skinparam componentBackgroundColor #F0F7F6
+skinparam noteBackgroundColor #FFF4D9
+skinparam noteBorderColor #D8AA49
+skinparam roundcorner 10
+skinparam nodesep 70
+skinparam ranksep 85
+title 三类角色 · 功能权限用例图
+left to right direction
+actor "有效账本成员" as All
+actor "管理员" as Admin
+actor "普通记账成员" as Writer
+actor "只读成员" as Reader
+Admin --|> All
+Writer --|> All
+Reader --|> All
+rectangle "多人共享记账系统" {
+  usecase "查看账本及收支\n组合查询 / 分类成员月度统计" as Read
+  usecase "新增本人收支\n修改、撤回及重提本人未审记录" as Write
+  usecase "邀请 / 权限设置\n管理员转让" as Members
+  usecase "审核 / 驳回\n整笔作废 / 关联调整" as Review
+  usecase "月总及分类预算\n超预算阻止开关" as Budget
+  usecase "月结 / 查看快照\n作废结算单后重结" as Settle
+  usecase "查询操作日志\n导出统计与日志" as Logs
+  usecase "退出账本\n保留历史" as Exit
+}
+All --> Read
+All --> Exit
+Writer --> Write
+Admin --> Members
+Admin --> Review
+Admin --> Budget
+Admin --> Settle
+Admin --> Logs
+note bottom of Write
+管理员是否兼具记账权限待确认。
+只读角色无记账、审核、设置与导出入口。
+end note
+note bottom of Exit
+管理员须先转让；不能失去最后管理员。
+有欠款禁止退出不是已确认规则，不擅自添加。
+end note
+@enduml

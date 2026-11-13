@@ -1,0 +1,62 @@
+@startuml
+!pragma layout smetana
+skinparam defaultFontName Microsoft YaHei
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam ArrowColor #52667B
+skinparam classBackgroundColor #F0F7F6
+skinparam classBorderColor #267568
+skinparam componentBackgroundColor #F0F7F6
+skinparam noteBackgroundColor #FFF4D9
+skinparam noteBorderColor #D8AA49
+skinparam roundcorner 10
+skinparam nodesep 70
+skinparam ranksep 85
+title 按月结算 · 快照、锁定与失败回滚
+autonumber
+actor "管理员" as Admin
+boundary "结算界面" as UI
+control "请求入口" as Gate
+control "结算服务" as Service
+control "分摊策略" as Policy
+database "关系数据库" as DB
+Admin -> UI : 选择月份并生成结算
+UI -> Gate : 账本、月份、请求号
+Gate -> DB : 校验当前成员、账本及管理员角色
+alt 无权限
+  Gate --> UI : 403，数据不变
+else 已授权
+  Gate -> Service : 发起结算
+  Service -> DB : 开始事务；幂等校验；锁定账本月份
+  alt 同请求成功结果已存在
+    DB --> Service : 首次结算单
+    Service -> DB : 结束事务
+    Service --> UI : 返回首次结果，提示已提交
+  else 本月已有有效单
+    Service -> DB : 回滚
+    Service --> UI : 已存在有效结算单
+  else 可生成
+    Service -> DB : 读取一致版本的有效明细及调整
+    Service -> Policy : 校验已确认规则并计算承担与差额
+    alt 规则未确认 / 输入不全 / 差额不守恒
+      Service -> DB : 回滚
+      Service --> UI : 无法生成，列出需处理问题
+    else 规则及数据可用
+      Service -> DB : 保存有效单、记录版本快照、成员差额
+      Service -> DB : 建立锁定关联、追加日志及成功请求凭据
+      alt 任一步骤失败
+        Service -> DB : 全部回滚（包括单据、快照、锁定、凭据）
+        Service --> UI : 生成失败，可用原请求号重试
+      else 全部成功
+        Service -> DB : 提交事务
+        Service --> UI : 返回有效结算单
+      end
+    end
+  end
+end
+note over Service, DB
+所有影响该月结算集合的写入遵守相同的月份锁协议。
+数据库保证同账本同月最多一个有效单，失败不遗留部分数据。
+旧单作废保留快照；跨期依赖与作废后解锁规则待确认。
+end note
+@enduml

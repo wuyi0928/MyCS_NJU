@@ -1,0 +1,31 @@
+@startuml
+!pragma layout smetana
+skinparam defaultFontName Microsoft YaHei
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam ArrowColor #52667B
+skinparam classBackgroundColor #F0F7F6
+skinparam classBorderColor #267568
+skinparam componentBackgroundColor #F0F7F6
+skinparam noteBackgroundColor #FFF4D9
+skinparam noteBorderColor #D8AA49
+skinparam roundcorner 10
+skinparam nodesep 70
+skinparam ranksep 85
+title 结算单 · 有效、作废与重结
+state "有效" as Active
+state "已作废" as Void
+[*] --> Active : 管理员生成成功\n单据、快照、锁定、日志整体提交
+Active --> Void : 管理员填原因作废\n保留快照并记日志
+Void --> [*]
+note right of Active
+生成失败回滚，不产生单据。
+同账本同月至多一张有效单。
+无成员逐人确认和真实支付流程。
+end note
+note right of Void
+重结创建另一张新有效单，关联旧单。
+不是将旧单恢复为有效，也不覆盖旧快照。
+作废后解锁与跨期调整依赖策略待确认。
+end note
+@enduml
